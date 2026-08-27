@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your Northstar Auth account">
+  <title>Create account | Northstar Auth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+  <main class="auth-shell auth-shell-register">
+    <section class="auth-intro" aria-label="Northstar Auth introduction">
+      <a class="brand" href="index.html"><span class="brand-mark">N</span><span>Northstar</span></a>
+      <div class="intro-copy">
+        <p class="eyebrow">Make space for good work</p>
+        <h1>A calmer way forward.</h1>
+        <p>Create a private workspace for the ideas and projects that matter to you.</p>
+      </div>
+      <p class="intro-foot">Client-side authentication demo <span class="dot"></span> Built for learning</p>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="card-heading">
+          <p class="eyebrow">Get started</p>
+          <h2>Create your account</h2>
+          <p>Set up your details. It only takes a moment.</p>
+        </div>
+        <form id="registerForm" novalidate>
+          <div class="field-group"><label for="registerUsername">Username</label><input id="registerUsername" name="username" type="text" autocomplete="username" placeholder="Choose a username" required><p class="field-message" id="usernameMessage" aria-live="polite"></p></div>
+          <div class="field-group"><label for="registerEmail">Email address</label><input id="registerEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><p class="field-message" id="emailMessage" aria-live="polite"></p></div>
+          <div class="field-group"><label for="registerPassword">Password</label><input id="registerPassword" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required><p class="field-message" id="registerPasswordMessage" aria-live="polite"></p></div>
+          <div class="field-group"><label for="confirmPassword">Confirm password</label><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your password" required><p class="field-message" id="confirmMessage" aria-live="polite"></p></div>
+          <p class="form-message" id="registerMessage" role="alert" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">Create account <span aria-hidden="true">&#8594;</span></button>
+        </form>
+        <p class="form-note">Already have an account? <a href="index.html">Sign in</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

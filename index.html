@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure client-side login authentication demo">
+  <title>Sign in | Northstar Auth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <main class="auth-shell">
+    <section class="auth-intro" aria-label="Northstar Auth introduction">
+      <a class="brand" href="index.html"><span class="brand-mark">N</span><span>Northstar</span></a>
+      <div class="intro-copy">
+        <p class="eyebrow">Private by design</p>
+        <h1>Your work, in focus.</h1>
+        <p>Sign in to your personal workspace and pick up exactly where you left off.</p>
+      </div>
+      <p class="intro-foot">Client-side authentication demo <span class="dot"></span> Built for learning</p>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="card-heading">
+          <p class="eyebrow">Welcome back</p>
+          <h2>Sign in to Northstar</h2>
+          <p>Enter your details to continue to your dashboard.</p>
+        </div>
+        <form id="loginForm" novalidate>
+          <div class="field-group">
+            <label for="loginIdentity">Username or email</label>
+            <input id="loginIdentity" name="identity" type="text" autocomplete="username" placeholder="you@example.com" required>
+            <p class="field-message" id="identityMessage" aria-live="polite"></p>
+          </div>
+          <div class="field-group">
+            <div class="label-row"><label for="loginPassword">Password</label><a href="register.html">Need an account?</a></div>
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+            <p class="field-message" id="passwordMessage" aria-live="polite"></p>
+          </div>
+          <p class="form-message" id="loginMessage" role="alert" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">Sign in <span aria-hidden="true">&#8594;</span></button>
+        </form>
+        <p class="form-note">Your password is hashed locally with SHA-256 before it is checked.</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

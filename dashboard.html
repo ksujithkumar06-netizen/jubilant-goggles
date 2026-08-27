@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Northstar Auth dashboard">
+  <title>Dashboard | Northstar Auth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <div class="dashboard-layout">
+    <header class="dashboard-header">
+      <a class="brand brand-dark" href="dashboard.html"><span class="brand-mark">N</span><span>Northstar</span></a>
+      <div class="header-actions"><span class="status-pill"><span class="status-dot"></span>Session active</span><button class="button button-quiet" id="logoutButton" type="button">Log out <span aria-hidden="true">&#8599;</span></button></div>
+    </header>
+    <main class="dashboard-main" id="dashboardContent" hidden>
+      <section class="welcome-block"><p class="eyebrow">Your workspace</p><h1>Good to see you, <span id="welcomeUsername">there</span>.</h1><p>Your session is secure and your workspace is ready for whatever comes next.</p></section>
+      <section class="dashboard-grid" aria-label="Dashboard overview">
+        <article class="dashboard-card card-highlight"><div class="card-icon">&#10024;</div><p class="eyebrow">Today</p><h2>Make room for progress.</h2><p>Small, deliberate steps add up. Your personal dashboard is a quiet place to begin.</p></article>
+        <article class="dashboard-card"><p class="eyebrow">Authentication</p><div class="metric-row"><strong>Protected</strong><span class="check-mark">&#10003;</span></div><p class="muted">You are signed in with an active local session.</p></article>
+        <article class="dashboard-card"><p class="eyebrow">Account</p><div class="account-line"><span class="avatar" id="userInitial">N</span><div><strong id="accountUsername">Username</strong><span class="muted" id="accountEmail">Account member</span></div></div></article>
+      </section>
+    </main>
+    <footer class="dashboard-footer"><span>Northstar Auth</span><span>Local demo environment</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
